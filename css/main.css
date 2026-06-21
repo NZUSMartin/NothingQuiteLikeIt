@@ -698,7 +698,7 @@
   border: 1px solid var(--c-border);
 }
 @media (min-width: 560px)  { .rates__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .rates__grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1000px) { .rates__grid { grid-template-columns: repeat(3, 1fr); } }
 
 .rate-card {
   background: var(--c-white);
