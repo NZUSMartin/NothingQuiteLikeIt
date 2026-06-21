@@ -19,7 +19,7 @@
   --f-body:    'Inter', system-ui, -apple-system, sans-serif;
 
   /* Type scale — fluid */
-  --t-hero:   clamp(2.5rem, 5.5vw, 5.5rem);
+  --t-hero:   clamp(2.75rem, 7vw, 7.5rem);
   --t-h1:     clamp(2.25rem, 4.5vw, 4rem);
   --t-h2:     clamp(1.75rem, 3vw,   2.75rem);
   --t-h3:     clamp(1.3rem,  2.2vw, 1.75rem);
