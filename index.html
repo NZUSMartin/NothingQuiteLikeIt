@@ -96,8 +96,8 @@
 <section class="hero" aria-label="Hero">
   <img
     class="hero__bg"
-    src="/assets/images/hero-pool-exterior.png"
-    alt="The villa's infinity pool and contemporary façade at golden hour"
+    src="/assets/images/beach-hammock-sunset.jpg"
+    alt="Hammock between palms on the private beach at golden sunset, Rum Point"
     fetchpriority="high"
     decoding="async"
   >
@@ -166,7 +166,8 @@
 
   <div class="gallery__filter" role="group" aria-label="Filter gallery by room">
     <button class="gallery__filter-btn active" data-filter="all">All</button>
-    <button class="gallery__filter-btn" data-filter="exterior">Exterior &amp; Pool</button>
+    <button class="gallery__filter-btn" data-filter="beach">Beach</button>
+    <button class="gallery__filter-btn" data-filter="exterior">Pool &amp; Exterior</button>
     <button class="gallery__filter-btn" data-filter="living">Living</button>
     <button class="gallery__filter-btn" data-filter="bedroom">Bedrooms</button>
     <button class="gallery__filter-btn" data-filter="kitchen">Kitchen</button>
@@ -174,6 +175,66 @@
   </div>
 
   <div class="gallery__grid">
+
+    <div class="gallery__item gallery__item--wide"
+         data-group="beach"
+         data-src="/assets/images/beach-hammock-sunset.jpg"
+         data-label="Private Beach at Sunset">
+      <img src="/assets/images/beach-hammock-sunset.jpg"
+           alt="Hammock between palms on the private beach at golden sunset"
+           loading="lazy" decoding="async">
+      <div class="gallery__item-overlay">
+        <span class="gallery__item-label">Private Beach at Sunset</span>
+      </div>
+    </div>
+
+    <div class="gallery__item"
+         data-group="beach"
+         data-src="/assets/images/beach-hammock-day.jpg"
+         data-label="Private Beach">
+      <img src="/assets/images/beach-hammock-day.jpg"
+           alt="Hammock between palms on the private beach with turquoise Caribbean water"
+           loading="lazy" decoding="async">
+      <div class="gallery__item-overlay">
+        <span class="gallery__item-label">Private Beach</span>
+      </div>
+    </div>
+
+    <div class="gallery__item"
+         data-group="beach"
+         data-src="/assets/images/beach-dusk.jpg"
+         data-label="Beach at Dusk">
+      <img src="/assets/images/beach-dusk.jpg"
+           alt="Private beach at dusk — sun loungers, kayaks and palm silhouettes"
+           loading="lazy" decoding="async">
+      <div class="gallery__item-overlay">
+        <span class="gallery__item-label">Beach at Dusk</span>
+      </div>
+    </div>
+
+    <div class="gallery__item"
+         data-group="beach"
+         data-src="/assets/images/beach-sunrise.jpg"
+         data-label="Rum Point Sunrise">
+      <img src="/assets/images/beach-sunrise.jpg"
+           alt="Palm trees and hammock at sunrise on Rum Point beach"
+           loading="lazy" decoding="async">
+      <div class="gallery__item-overlay">
+        <span class="gallery__item-label">Rum Point Sunrise</span>
+      </div>
+    </div>
+
+    <div class="gallery__item"
+         data-group="beach"
+         data-src="/assets/images/beach-sunset-water.jpg"
+         data-label="Rum Point Sunset">
+      <img src="/assets/images/beach-sunset-water.jpg"
+           alt="Rum Point sunset reflected in calm Caribbean waters"
+           loading="lazy" decoding="async">
+      <div class="gallery__item-overlay">
+        <span class="gallery__item-label">Rum Point Sunset</span>
+      </div>
+    </div>
 
     <div class="gallery__item gallery__item--wide"
          data-group="exterior"
@@ -512,11 +573,19 @@
 
   <div class="location__image">
     <img
-      src="/assets/images/hero-pool-exterior.png"
-      alt="The villa's pool terrace and contemporary façade set among tropical gardens"
+      src="/assets/images/beach-dusk.jpg"
+      alt="The private beach at dusk — sun loungers, kayaks and palm silhouettes at Rum Point"
       loading="lazy"
       decoding="async"
     >
+    <div class="location__sign">
+      <img
+        src="/assets/images/location-sign.jpg"
+        alt="Sand Pointe Road, Rum Point — the villa's address"
+        loading="lazy"
+        decoding="async"
+      >
+    </div>
   </div>
 
 </section>

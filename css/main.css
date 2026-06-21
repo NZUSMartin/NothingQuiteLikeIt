@@ -642,7 +642,24 @@
   object-fit: cover;
   transition: transform var(--dur-xslow) var(--ease-luxury);
 }
-.location__image:hover img { transform: scale(1.03); }
+.location__image:hover img:first-child { transform: scale(1.03); }
+
+.location__sign {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 130px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  border: 2px solid rgba(255,255,255,0.6);
+}
+.location__sign img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: none;
+}
 
 .location__content {
   background: var(--c-mist);
