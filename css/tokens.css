@@ -1,0 +1,63 @@
+/* ============================================================
+   NOTHING QUITE LIKE IT — Design tokens
+   ============================================================ */
+:root {
+  /* Brand colours */
+  --c-teal:        #1B3840;   /* Primary — dark teal (from brand identity) */
+  --c-teal-hover:  #254e5a;   /* Hover state */
+  --c-teal-bright: #28B4B4;   /* Accent bar / eyebrow highlight */
+  --c-gold:        #C9A96E;   /* Gold divider / accent */
+  --c-white:       #FAFAF8;   /* Page background */
+  --c-ink:         #1C1C1A;   /* Body text */
+  --c-ink-light:   #5a5a55;   /* Secondary text */
+  --c-mist:        #F2F2EF;   /* Alternate section bg */
+  --c-border:      #E0E0DB;   /* Dividers */
+  --c-overlay:     rgba(17, 40, 46, 0.58);  /* Hero overlay */
+
+  /* Typography */
+  --f-display: 'Cormorant Garamond', Georgia, serif;
+  --f-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Type scale — fluid */
+  --t-hero:   clamp(2.75rem, 6.5vw, 6rem);
+  --t-h1:     clamp(2rem,    4vw,   3.5rem);
+  --t-h2:     clamp(1.6rem,  2.8vw, 2.5rem);
+  --t-h3:     clamp(1.2rem,  2vw,   1.6rem);
+  --t-lead:   clamp(1rem,    1.2vw, 1.125rem);
+  --t-body:   1rem;
+  --t-small:  0.875rem;
+  --t-label:  0.6875rem;
+
+  /* Spacing */
+  --s-xs:  0.5rem;
+  --s-sm:  1rem;
+  --s-md:  2rem;
+  --s-lg:  4rem;
+  --s-xl:  6rem;
+  --s-2xl: 9rem;
+
+  /* Layout */
+  --max-w:  1440px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+
+  /* Motion */
+  --ease-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:  180ms;
+  --dur-mid:   360ms;
+  --dur-slow:  640ms;
+  --dur-xslow: 1200ms;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgba(17, 40, 46, 0.06);
+  --shadow-sm: 0 2px 8px  rgba(17, 40, 46, 0.08);
+  --shadow-md: 0 6px 24px rgba(17, 40, 46, 0.10);
+  --shadow-lg: 0 16px 56px rgba(17, 40, 46, 0.14);
+
+  /* Z-index ladder */
+  --z-base:       1;
+  --z-gallery:  100;
+  --z-lightbox: 200;
+  --z-header:   300;
+  --z-mobile:   400;
+}
