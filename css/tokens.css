@@ -19,14 +19,14 @@
   --f-body:    'Inter', system-ui, -apple-system, sans-serif;
 
   /* Type scale — fluid */
-  --t-hero:   clamp(2rem, 4.5vw, 4.5rem);
-  --t-h1:     clamp(2rem,    4vw,   3.5rem);
-  --t-h2:     clamp(1.6rem,  2.8vw, 2.5rem);
-  --t-h3:     clamp(1.2rem,  2vw,   1.6rem);
-  --t-lead:   clamp(1rem,    1.2vw, 1.125rem);
-  --t-body:   1rem;
-  --t-small:  0.875rem;
-  --t-label:  0.8125rem;
+  --t-hero:   clamp(2.5rem, 5.5vw, 5.5rem);
+  --t-h1:     clamp(2.25rem, 4.5vw, 4rem);
+  --t-h2:     clamp(1.75rem, 3vw,   2.75rem);
+  --t-h3:     clamp(1.3rem,  2.2vw, 1.75rem);
+  --t-lead:   clamp(1.0625rem, 1.3vw, 1.2rem);
+  --t-body:   1.0625rem;
+  --t-small:  0.9375rem;
+  --t-label:  0.875rem;
 
   /* Spacing */
   --s-xs:  0.5rem;
