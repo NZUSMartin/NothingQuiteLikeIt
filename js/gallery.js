@@ -9,19 +9,40 @@
   const lightbox = document.querySelector('.lightbox');
   if (!lightbox || !items.length) return;
 
-  const img     = lightbox.querySelector('.lightbox__img');
-  const caption = lightbox.querySelector('.lightbox__caption');
-  const closeBtn = lightbox.querySelector('.lightbox__close');
-  const prevBtn  = lightbox.querySelector('.lightbox__prev');
-  const nextBtn  = lightbox.querySelector('.lightbox__next');
+  const img        = lightbox.querySelector('.lightbox__img');
+  const videoWrap  = lightbox.querySelector('.lightbox__video-wrap');
+  const videoFrame = lightbox.querySelector('.lightbox__video');
+  const caption    = lightbox.querySelector('.lightbox__caption');
+  const closeBtn   = lightbox.querySelector('.lightbox__close');
+  const prevBtn    = lightbox.querySelector('.lightbox__prev');
+  const nextBtn    = lightbox.querySelector('.lightbox__next');
 
   let currentIndex = 0;
+
+  function showImage(item) {
+    img.src = item.dataset.src;
+    img.alt = item.dataset.label || '';
+    img.style.display = '';
+    if (videoWrap) { videoWrap.setAttribute('aria-hidden', 'true'); videoFrame.src = ''; }
+  }
+
+  function showVideo(item) {
+    if (videoWrap && videoFrame) {
+      videoFrame.src = item.dataset.video + '?autoplay=1';
+      videoWrap.setAttribute('aria-hidden', 'false');
+    }
+    img.style.display = 'none';
+    img.src = '';
+  }
 
   function open(index) {
     currentIndex = index;
     const item = items[index];
-    img.src = item.dataset.src;
-    img.alt = item.dataset.label || '';
+    if (item.dataset.video) {
+      showVideo(item);
+    } else {
+      showImage(item);
+    }
     if (caption) caption.textContent = item.dataset.label || '';
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden', 'false');
@@ -33,7 +54,10 @@
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
-    items[currentIndex]?.querySelector('img')?.closest('.gallery__item')?.focus();
+    if (videoFrame) videoFrame.src = '';
+    if (videoWrap) videoWrap.setAttribute('aria-hidden', 'true');
+    img.style.display = '';
+    items[currentIndex]?.closest('.gallery__item')?.focus();
   }
 
   function navigate(dir) {
@@ -58,7 +82,6 @@
   prevBtn?.addEventListener('click', () => navigate(-1));
   nextBtn?.addEventListener('click', () => navigate(1));
 
-  // Keyboard nav
   lightbox.addEventListener('keydown', e => {
     if (!lightbox.classList.contains('open')) return;
     if (e.key === 'Escape')    close();
@@ -66,7 +89,6 @@
     if (e.key === 'ArrowRight') navigate(1);
   });
 
-  // Close on backdrop
   lightbox.addEventListener('click', e => {
     if (e.target === lightbox) close();
   });
