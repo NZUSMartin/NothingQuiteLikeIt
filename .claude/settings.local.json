@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(gh auth status)"
+      "PowerShell(gh auth status)",
+      "Bash(pandoc \"260618_Villa_Website_Build_Guidance.docx\" -t markdown)",
+      "Bash(pandoc \"260618_Villa_Questionnaire_and_Features.docx\" -t markdown)",
+      "Bash(pandoc \"G260618_rand_Cayman_Policy_Parameters.docx\" -t markdown)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\marti\\\\OneDrive\\\\Desktop\\\\Claude Code\\\\Nothing Quite Like It\\\\260620_New Photorealistic Renderings\" | ForEach-Object { \"$\\($_.Name\\) — $\\([math]::Round\\($_.Length/1KB\\)\\)KB\" })",
+      "Bash(git add *)",
+      "Bash(git push *)",
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\marti\\\\OneDrive\\\\Desktop\\\\Claude Code\\\\Nothing Quite Like It\\\\260622_Disclaimer\")",
+      "Bash(Select-Object Name)",
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\marti\\\\OneDrive\\\\Desktop\\\\Claude Code\\\\Nothing Quite Like It\\\\260620_New Photorealistic Renderings\")",
+      "Bash(extract-text \"C:\\\\Users\\\\marti\\\\OneDrive\\\\Desktop\\\\Claude Code\\\\Nothing Quite Like It\\\\260622_Disclaimer\\\\260622_Disclaimer.docx\")",
+      "Bash(git mv *)"
     ]
   }
 }
