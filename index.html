@@ -4,1131 +4,233 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nothing Quite Like It — Private Beachfront Villa, Rum Point, Grand Cayman</title>
-  <meta name="description" content="An architecturally significant beachfront estate on Rum Point, Grand Cayman. Six en-suite bedrooms, private beach, heated infinity pool. Opening December 2026. Enquire for the inaugural season.">
-  <link rel="canonical" href="https://www.nothingquitelikeit.com/">
-
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://www.nothingquitelikeit.com/">
-  <meta property="og:title"       content="Nothing Quite Like It — Private Beachfront Villa, Grand Cayman">
-  <meta property="og:description" content="An architecturally significant beachfront estate on Rum Point. Six bedrooms, private beach, infinity pool. Opening December 2026.">
-  <meta property="og:image"       content="https://www.nothingquitelikeit.com/assets/images/hero-lounge-sunset.jpg">
-  <meta name="twitter:card"       content="summary_large_image">
-
-  <!-- Schema.org structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Nothing Quite Like It",
-    "description": "A private beachfront villa on Rum Point, Grand Cayman. Six bedrooms, private beach, infinity pool.",
-    "url": "https://www.nothingquitelikeit.com",
-    "telephone": "+13458888888",
-    "email": "stay@nothingquitelikeit.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "134 Sand Pointe Road, Rum Point",
-      "addressLocality": "Grand Cayman",
-      "addressCountry": "KY"
-    },
-    "numberOfRooms": 6,
-    "amenityFeature": [
-      {"@type": "LocationFeatureSpecification", "name": "Private beach"},
-      {"@type": "LocationFeatureSpecification", "name": "Infinity pool"},
-      {"@type": "LocationFeatureSpecification", "name": "Fitness room"}
-    ]
-  }
-  </script>
-
-  <!-- Favicon -->
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-
-  <!-- Google Fonts -->
+  <meta name="description" content="An architecturally significant beachfront estate on Rum Point, Grand Cayman. Opening December 2026.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/tokens.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+      background: var(--c-teal);
+      color: var(--c-white);
+      font-family: var(--f-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+    }
+
+    /* ── Wordmark ── */
+    .d-wordmark {
+      padding: 2rem var(--gutter, 2rem);
+      font-family: var(--f-display);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(250, 250, 248, 0.6);
+      text-decoration: none;
+    }
+
+    /* ── Main content ── */
+    .d-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem var(--gutter, 2rem) 4rem;
+    }
+
+    .d-card {
+      max-width: 680px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .d-eyebrow {
+      font-family: var(--f-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--c-gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .d-title {
+      font-family: var(--f-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--c-white);
+      margin-bottom: 1.5rem;
+    }
+
+    .d-title em {
+      font-style: italic;
+    }
+
+    .d-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--c-gold);
+      margin: 0 auto 2.5rem;
+    }
+
+    .d-intro {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(250, 250, 248, 0.75);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Three points ── */
+    .d-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 3rem;
+      border-top: 1px solid rgba(201, 169, 110, 0.25);
+    }
+
+    .d-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+      text-align: left;
+    }
+
+    .d-point__num {
+      flex-shrink: 0;
+      font-family: var(--f-display);
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--c-gold);
+      line-height: 1;
+      margin-top: 0.1rem;
+      min-width: 1.5rem;
+    }
+
+    .d-point__text {
+      font-size: 0.9375rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(250, 250, 248, 0.8);
+    }
+
+    .d-point__text strong {
+      font-weight: 500;
+      color: var(--c-white);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-family: var(--f-body);
+      font-size: 0.875rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── CTA ── */
+    .d-cta {
+      display: inline-block;
+      font-family: var(--f-body);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--c-teal);
+      background: var(--c-gold);
+      padding: 1rem 2.25rem;
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 200ms ease, transform 200ms ease;
+    }
+
+    .d-cta:hover {
+      background: #d9bc87;
+      transform: translateY(-1px);
+    }
+
+    /* ── Footer note ── */
+    .d-footer {
+      padding: 1.5rem var(--gutter, 2rem);
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: rgba(250, 250, 248, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      .d-point {
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════════════════
-     SITE HEADER
-════════════════════════════════════════════════════════════ -->
-<header class="site-header" role="banner">
-  <a href="/" class="header__wordmark" aria-label="Nothing Quite Like It — home">
-    Nothing Quite Like It
-  </a>
-
-  <nav class="header__actions" aria-label="Primary navigation">
-    <ul class="header__nav" role="list">
-      <li><a href="#story">The Villa</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#accommodation">Rooms</a></li>
-      <li><a href="#rates">Rates</a></li>
-      <li><a href="#location">Location</a></li>
-    </ul>
-    <a href="#enquiry" class="btn header__cta">Enquire</a>
-    <button class="header__menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</header>
-
-<!-- Mobile navigation -->
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-  <a href="#story">The Villa</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#accommodation">Rooms</a>
-  <a href="#services">Services</a>
-  <a href="#rates">Rates</a>
-  <a href="#location">Location</a>
-  <a href="#enquiry">Enquire</a>
-</nav>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     1. HERO
-════════════════════════════════════════════════════════════ -->
-<section class="hero" aria-label="Hero">
-  <img
-    class="hero__bg"
-    src="/assets/images/hero-beach-alt.jpg"
-    alt="Private beach at Rum Point, Grand Cayman"
-    fetchpriority="high"
-    decoding="async"
-  >
-  <div class="hero__overlay" aria-hidden="true"></div>
-
-  <div class="hero__content">
-    <p class="hero__location">Rum Point · Grand Cayman</p>
-    <div class="hero__wipe-title">
-      <h1 class="hero__name">Nothing Quite Like It</h1>
-    </div>
-    <div class="hero__wipe-subtitle">
-      <p class="hero__tagline">There is nothing quite like it</p>
-    </div>
-    <div class="hero__wipe-actions">
-      <div class="hero__actions">
-        <a href="#enquiry" class="btn btn--primary">Enquire Now</a>
-        <a href="#gallery" class="btn btn--outline">View Gallery</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero__scroll-cue" aria-hidden="true">Discover</div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     2. THE STORY
-════════════════════════════════════════════════════════════ -->
-<section class="story" id="story" aria-labelledby="story-heading">
-  <div class="story__image">
-    <img
-      src="/assets/images/gallery-living-dining.jpg"
-      alt="Open-plan living and dining with floor-to-ceiling glass and ocean views beyond"
-      loading="lazy"
-      decoding="async"
-    >
-  </div>
-
-  <div class="story__content">
-    <p class="eyebrow">The Villa</p>
-    <h2 id="story-heading">A beachfront estate unlike any other</h2>
-    <span class="gold-rule"></span>
-    <p>Conceived for those who demand the extraordinary, Nothing Quite Like It is a new waterfront estate on the celebrated north shore of Grand Cayman — where the Caribbean meets Rum Point's legendary sunsets and the clearest water in the hemisphere.</p>
-    <p>Six en-suite bedrooms, approximately 7,500 square feet (700 sqm) of considered living space, and a private beach that belongs entirely to you. Floor-to-ceiling glass dissolves the boundary between indoors and ocean. A heated infinity pool cascades toward the sea. Every room, every detail, composed for the rare family that settles for nothing less.</p>
-    <p>Opening December 2026 — be among the very first to stay.</p>
-
-    <div class="story__pedigree">
-      <div class="story__credit">
-        <strong>John Doak Architects</strong>
-        <span>Architecture &amp; design</span>
-      </div>
-      <div class="story__credit">
-        <strong>KaSa Interiors</strong>
-        <span>Interior design</span>
-      </div>
-    </div>
-
-    <!-- TODO_CONFIRM: verify architect and interior designer names/credits before launch -->
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     3. GALLERY
-════════════════════════════════════════════════════════════ -->
-<section class="gallery section" id="gallery" aria-labelledby="gallery-heading">
-  <div class="gallery__intro reveal">
-    <p class="eyebrow" style="justify-content:center">Gallery</p>
-    <h2 id="gallery-heading">Every room, a composition</h2>
-    <p>Photorealistic renderings — opening December 2026</p>
-  </div>
-
-  <div class="gallery__filter" role="group" aria-label="Filter gallery by room">
-    <button class="gallery__filter-btn active" data-filter="all">All</button>
-    <button class="gallery__filter-btn" data-filter="beach">Beach</button>
-    <button class="gallery__filter-btn" data-filter="exterior">Pool &amp; Exterior</button>
-    <button class="gallery__filter-btn" data-filter="living">Living</button>
-    <button class="gallery__filter-btn" data-filter="bedroom">Bedrooms</button>
-    <button class="gallery__filter-btn" data-filter="kitchen">Kitchen</button>
-    <button class="gallery__filter-btn" data-filter="wellness">Wellness</button>
-    <button class="gallery__filter-btn" data-filter="floorplan">Floorplans</button>
-  </div>
-
-  <div class="gallery__grid">
-
-    <!-- ── Beach ── -->
-    <div class="gallery__item gallery__item--wide"
-         data-group="beach"
-         data-src="/assets/images/beach-hammock-sunset.jpg"
-         data-label="Private Beach at Sunset">
-      <img src="/assets/images/beach-hammock-sunset.jpg"
-           alt="Hammock between palms on the private beach at golden sunset"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Private Beach at Sunset</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="beach"
-         data-src="/assets/images/beach-sunrise.jpg"
-         data-label="Rum Point Sunrise">
-      <img src="/assets/images/beach-sunrise.jpg"
-           alt="Palm trees and hammock at sunrise on Rum Point beach"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Rum Point Sunrise</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="beach"
-         data-src="/assets/images/beach-hammock-day.jpg"
-         data-label="Private Beach">
-      <img src="/assets/images/beach-hammock-day.jpg"
-           alt="Hammock between palms on the private beach with turquoise Caribbean water"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Private Beach</span>
-      </div>
-    </div>
-
-    <div class="gallery__item gallery__item--wide"
-         data-group="beach"
-         data-src="/assets/images/beach-dusk.jpg"
-         data-label="Beach at Dusk">
-      <img src="/assets/images/beach-dusk.jpg"
-           alt="Private beach at dusk — sun loungers, kayaks and palm silhouettes"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Beach at Dusk</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="beach"
-         data-src="/assets/images/beach-sunset-water.jpg"
-         data-label="Rum Point Sunset">
-      <img src="/assets/images/beach-sunset-water.jpg"
-           alt="Rum Point sunset reflected in calm Caribbean waters"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Rum Point Sunset</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="beach"
-         data-src="/assets/images/beach-fire-sunset.jpg"
-         data-label="Rum Point Fire Sunset">
-      <img src="/assets/images/beach-fire-sunset.jpg"
-           alt="Dramatic fiery sunset over the Caribbean at Rum Point"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Rum Point Fire Sunset</span>
-      </div>
-    </div>
-
-    <!-- ── Pool & Exterior ── -->
-    <div class="gallery__item"
-         data-group="exterior"
-         data-src="/assets/images/hero-pool-exterior.png"
-         data-label="Pool &amp; Villa">
-      <img src="/assets/images/hero-pool-exterior.png"
-           alt="Villa exterior with infinity pool and tropical gardens"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Pool &amp; Villa</span>
-      </div>
-    </div>
-
-    <div class="gallery__item gallery__item--wide"
-         data-group="exterior"
-         data-src="/assets/images/pr-porch-morning.png"
-         data-label="Screened Porch — Morning">
-      <img src="/assets/images/pr-porch-morning.png"
-           alt="Screened oceanfront porch set for breakfast in the morning light"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Screened Porch — Morning</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="exterior"
-         data-src="/assets/images/pr-porch-sunset.png"
-         data-label="Screened Porch — Sunset">
-      <img src="/assets/images/pr-porch-sunset.png"
-           alt="Screened oceanfront porch at sunset with dinner table set"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Screened Porch — Sunset</span>
-      </div>
-    </div>
-
-    <!-- ── Living ── -->
-    <div class="gallery__item"
-         data-group="living"
-         data-src="/assets/images/pr-living-dining.png"
-         data-label="Living &amp; Dining">
-      <img src="/assets/images/pr-living-dining.png"
-           alt="Open-plan living and dining room with ocean views at sunset"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Living &amp; Dining</span>
-      </div>
-    </div>
-
-    <div class="gallery__item gallery__item--wide"
-         data-group="living"
-         data-src="/assets/images/pr-bar-morning.png"
-         data-label="Living Room — Morning">
-      <img src="/assets/images/pr-bar-morning.png"
-           alt="Bright open living room and bar in morning light with ocean views"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Living Room — Morning</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="living"
-         data-src="/assets/images/pr-bar.png"
-         data-label="Private Bar">
-      <img src="/assets/images/pr-bar.png"
-           alt="Private bar with ocean view and statement fireplace"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Private Bar</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="living"
-         data-src="/assets/images/pr-bar-sunset.png"
-         data-label="Bar at Sunset">
-      <img src="/assets/images/pr-bar-sunset.png"
-           alt="Private bar at sunset — fireplace lit, guests relaxing"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Bar at Sunset</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="living"
-         data-src="/assets/images/pr-staircase.png"
-         data-label="Grand Staircase">
-      <img src="/assets/images/pr-staircase.png"
-           alt="Soaring double-height staircase atrium with skylight and ocean view"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Grand Staircase</span>
-      </div>
-    </div>
-
-    <div class="gallery__item gallery__item--wide"
-         data-group="living"
-         data-src="/assets/images/pr-view-gallery.png"
-         data-label="View from Upper Gallery">
-      <img src="/assets/images/pr-view-gallery.png"
-           alt="View down into the living room from the upper gallery landing"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">View from Upper Gallery</span>
-      </div>
-    </div>
-
-    <!-- ── Bedrooms ── -->
-    <div class="gallery__item"
-         data-group="bedroom"
-         data-src="/assets/images/pr-bedroom-2.png"
-         data-label="Ocean Suite">
-      <img src="/assets/images/pr-bedroom-2.png"
-           alt="Master ocean-view suite with panoramic floor-to-ceiling glass and private terrace"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Ocean Suite</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="bedroom"
-         data-src="/assets/images/pr-bedroom-4.png"
-         data-label="Garden Suite">
-      <img src="/assets/images/pr-bedroom-4.png"
-           alt="Garden-view king suite with warm timber accents and private terrace"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Garden Suite</span>
-      </div>
-    </div>
-
-    <div class="gallery__item gallery__item--wide"
-         data-group="bedroom"
-         data-src="/assets/images/pr-bedroom-4b.png"
-         data-label="King Suite">
-      <img src="/assets/images/pr-bedroom-4b.png"
-           alt="King suite with dark timber feature wall and bespoke wall hanging"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">King Suite</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="bedroom"
-         data-src="/assets/images/pr-bedroom-5.png"
-         data-label="Tropical Suite">
-      <img src="/assets/images/pr-bedroom-5.png"
-           alt="Tropical suite with dark timber headboard and garden terrace"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Tropical Suite</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="bedroom"
-         data-src="/assets/images/pr-bedroom-6.png"
-         data-label="Palm Suite">
-      <img src="/assets/images/pr-bedroom-6.png"
-           alt="Palm Suite with dramatic hand-painted palm mural and garden views"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Palm Suite</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="bedroom"
-         data-src="/assets/images/pr-balcony-bedroom.png"
-         data-label="Suite Balcony">
-      <img src="/assets/images/pr-balcony-bedroom.png"
-           alt="Private suite balcony with rattan chairs looking into the bedroom and bath"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Suite Balcony</span>
-      </div>
-    </div>
-
-
-    <div class="gallery__item gallery__item--wide"
-         data-group="bedroom"
-         data-src="/assets/images/pr-bath-2.png"
-         data-label="En-Suite — Freestanding Bath">
-      <img src="/assets/images/pr-bath-2.png"
-           alt="En-suite with black stone freestanding bath and ocean view"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">En-Suite — Freestanding Bath</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="bedroom"
-         data-src="/assets/images/pr-bath-5.png"
-         data-label="En-Suite — Double Vanity">
-      <img src="/assets/images/pr-bath-5.png"
-           alt="En-suite with double vessel basins and warm stone finishes"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">En-Suite — Double Vanity</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="bedroom"
-         data-src="/assets/images/pr-bath-6.png"
-         data-label="En-Suite — Shower Room">
-      <img src="/assets/images/pr-bath-6.png"
-           alt="En-suite shower room with stone tiles and vessel basin"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">En-Suite — Shower Room</span>
-      </div>
-    </div>
-
-    <div class="gallery__item gallery__item--wide"
-         data-group="bedroom"
-         data-src="/assets/images/pr-powder.png"
-         data-label="Powder Room">
-      <img src="/assets/images/pr-powder.png"
-           alt="Guest powder room with stone vessel sink and Cayman palm mural"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Powder Room</span>
-      </div>
-    </div>
-
-    <!-- ── Kitchen ── -->
-    <div class="gallery__item"
-         data-group="kitchen"
-         data-src="/assets/images/pr-kitchen.png"
-         data-label="Chef's Kitchen">
-      <img src="/assets/images/pr-kitchen.png"
-           alt="Chef's kitchen with dark stone island and garden view"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Chef's Kitchen</span>
-      </div>
-    </div>
-
-
-    <div class="gallery__item"
-         data-group="kitchen"
-         data-src="/assets/images/pr-chef.png"
-         data-label="Private Chef">
-      <img src="/assets/images/pr-chef.png"
-           alt="Private chef preparing in the service kitchen"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Private Chef</span>
-      </div>
-    </div>
-
-    <!-- ── Wellness ── -->
-    <div class="gallery__item"
-         data-group="wellness"
-         data-src="/assets/images/pr-gym.png"
-         data-label="Private Fitness Room">
-      <img src="/assets/images/pr-gym.png"
-           alt="Fully equipped private gym with floor-to-ceiling glass and tropical garden views"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Private Fitness Room</span>
-      </div>
-    </div>
-
-    <!-- ── Floorplans ── -->
-    <div class="gallery__item gallery__item--wide"
-         data-group="floorplan"
-         data-src="/260622_Floorplans/Level 1.jpg"
-         data-label="Level 1 Floorplan">
-      <img src="/260622_Floorplans/Level 1.jpg"
-           alt="Level 1 floorplan"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Level 1</span>
-      </div>
-    </div>
-
-    <div class="gallery__item"
-         data-group="floorplan"
-         data-src="/260622_Floorplans/Level 2.jpg"
-         data-label="Level 2 Floorplan">
-      <img src="/260622_Floorplans/Level 2.jpg"
-           alt="Level 2 floorplan"
-           loading="lazy" decoding="async">
-      <div class="gallery__item-overlay">
-        <span class="gallery__item-label">Level 2</span>
-      </div>
-    </div>
-
-
-  </div><!-- /gallery__grid -->
-
-  <div class="gallery__footer">
-    <p class="renderings-note">Photorealistic renderings — opening December 2026</p>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════
-     RENDERING VIDEO
-════════════════════════════════════════════════════════════ -->
-<section class="render-video section" id="render-video" aria-labelledby="render-video-heading">
-  <div class="container">
-    <div class="render-video__inner reveal">
-      <p class="eyebrow" style="justify-content:center">Rendering Video</p>
-      <h2 id="render-video-heading">Watch the villa come to life</h2>
-      <span class="gold-rule" style="margin:0 auto 2.5rem"></span>
-      <div class="render-video__embed">
-        <iframe
-          src="https://www.youtube.com/embed/lKbSkOQn_YM"
-          title="Nothing Quite Like It — Villa Walkthrough Rendering"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Lightbox -->
-<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
-  <button class="lightbox__close" aria-label="Close">&#x2715;</button>
-  <button class="lightbox__prev" aria-label="Previous image">&#x2039;</button>
-  <img class="lightbox__img" src="" alt="">
-  <div class="lightbox__video-wrap" aria-hidden="true">
-    <iframe class="lightbox__video" src="" title="Villa Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <button class="lightbox__next" aria-label="Next image">&#x203A;</button>
-  <p class="lightbox__caption"></p>
-</div>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     4. ACCOMMODATION
-════════════════════════════════════════════════════════════ -->
-<section class="accommodation section" id="accommodation" aria-labelledby="accommodation-heading">
-  <div class="container">
-    <div class="accommodation__inner">
-
-      <div class="reveal">
-        <p class="eyebrow">Accommodation</p>
-        <h2 id="accommodation-heading">Six bedrooms. Six and a half bathrooms. Space that breathes.</h2>
-        <span class="gold-rule"></span>
-        <p>Spread across two levels and approximately 7,500 square feet (700 sqm), the villa accommodates up to 12 adults with ease and genuine generosity of space — every bedroom en-suite, every view considered. Two ground-floor bedrooms offer direct garden access; two bedrooms frame ocean views. The master suite anchors the upper level.</p>
-        <!-- TODO_CONFIRM: Government-licensed maximum occupancy number -->
-
-        <div class="stats-row">
-          <div class="stat">
-            <div class="stat__number">6</div>
-            <div class="stat__label">Bedrooms</div>
-          </div>
-          <div class="stat">
-            <div class="stat__number">6.5</div>
-            <div class="stat__label">Bathrooms</div>
-          </div>
-          <div class="stat">
-            <div class="stat__number">12</div>
-            <div class="stat__label">Guests</div>
-          </div>
-          <div class="stat">
-            <div class="stat__number">7,500</div>
-            <div class="stat__label">Sq ft / 700 sqm</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="reveal reveal--d2">
-        <div class="bedroom-grid">
-
-          <div class="bedroom-card">
-            <div class="bedroom-card__label">Bedroom 1</div>
-            <div class="bedroom-card__name">Ocean Suite</div>
-            <div class="bedroom-card__detail">King · En-suite · Upper level · Ocean view</div>
-          </div>
-
-          <div class="bedroom-card">
-            <div class="bedroom-card__label">Bedroom 2</div>
-            <div class="bedroom-card__name">Ocean Suite</div>
-            <div class="bedroom-card__detail">King · En-suite · Upper level · Ocean view</div>
-          </div>
-
-          <div class="bedroom-card">
-            <div class="bedroom-card__label">Bedroom 3</div>
-            <div class="bedroom-card__name">Garden Suite</div>
-            <div class="bedroom-card__detail">King · En-suite · Garden view</div>
-          </div>
-
-          <div class="bedroom-card">
-            <div class="bedroom-card__label">Bedroom 4</div>
-            <div class="bedroom-card__name">Garden Suite</div>
-            <div class="bedroom-card__detail">King · En-suite · Garden view</div>
-          </div>
-
-          <div class="bedroom-card">
-            <div class="bedroom-card__label">Bedroom 5</div>
-            <div class="bedroom-card__name">Garden Suite</div>
-            <div class="bedroom-card__detail">King · En-suite · Ground floor · Garden view</div>
-          </div>
-
-          <div class="bedroom-card">
-            <div class="bedroom-card__label">Bedroom 6</div>
-            <div class="bedroom-card__name">Signature Suite</div>
-            <div class="bedroom-card__detail">Queen · En-suite · Ground floor · Garden view</div>
-          </div>
-
-        </div><!-- /bedroom-grid -->
-
-        <div class="floor-plan-placeholder" style="margin-top:1.5rem;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 3v18"/>
-          </svg>
-          <p>Floor plan in production — available prior to launch</p>
-        </div>
-      </div>
-
-    </div><!-- /accommodation__inner -->
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     5. SERVICES & CONCIERGE
-════════════════════════════════════════════════════════════ -->
-<section class="section" id="services" aria-labelledby="services-heading">
-  <div class="container">
-    <div class="services__header reveal">
-      <p class="eyebrow" style="justify-content:center">Services</p>
-      <h2 id="services-heading">The villa, at your service</h2>
-      <span class="gold-rule" style="margin-inline:auto"></span>
-      <p style="color:var(--c-ink-light)">Everything you need is either here or one call away. A dedicated concierge and villa manager ensures the entire stay runs without effort on your part.</p>
-    </div>
-
-    <div class="services__grid">
-
-      <div class="service-card reveal reveal--d1">
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-        <h3 class="service-card__title">Included in every stay</h3>
-        <p class="service-card__body">On-island concierge &amp; villa manager · Gardener · Pool maintenance · Airport transfers · Multi-room audio (Sonos) · High-speed fibre WiFi · Smart TVs &amp; streaming · Battery backup power</p>
-      </div>
-
-      <div class="service-card reveal reveal--d2">
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
-        </svg>
-        <h3 class="service-card__title">On request via concierge</h3>
-        <p class="service-card__body">Private chef · Daily housekeeping · Butler service · Nanny &amp; childcare · Private driver · Laundry service · Pre-arrival provisioning &amp; grocery stocking · In-villa wellness practitioners</p>
-      </div>
-
-      <div class="service-card reveal reveal--d3">
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        <h3 class="service-card__title">Experiences arranged</h3>
-        <p class="service-card__body">Private chef dinners · Stingray City · Snorkel &amp; scuba · Boat &amp; catamaran charter · Deep-sea fishing · Sunset cruise · Spa &amp; wellness · Private yoga &amp; trainer · Fine-dining reservations · Luxury car rental · Golf</p>
-      </div>
-
-      <div class="service-card reveal reveal--d1">
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-        <h3 class="service-card__title">Privacy &amp; security</h3>
-        <p class="service-card__body">Gated private entrance · Hedged grounds ·Security cameras (can be physically disabled on request for complete privacy) · In-room safes · Offsite security available on request</p>
-      </div>
-
-      <div class="service-card reveal reveal--d2">
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M3 11l19-9-9 19-2-8-8-2z"/>
-        </svg>
-        <h3 class="service-card__title">Beach &amp; water</h3>
-        <p class="service-card__body">Private beach · Beach loungers &amp; umbrellas · Kayaks &amp; paddleboards · Snorkel gear · Direct access to the reef · Private boat or catamaran charter on request · Easy access to Stingray City excursions</p>
-      </div>
-
-      <div class="service-card reveal reveal--d3">
-        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-        </svg>
-        <h3 class="service-card__title">Family &amp; children</h3>
-        <p class="service-card__body">Family-friendly · High chairs &amp; child equipment on request · Board games &amp; books · Nanny on request · Bicycles · Screened-in porch · Generous grounds to explore</p>
-      </div>
-
-    </div><!-- /services__grid -->
-
-    <div class="services__concierge reveal">
-      <div>
-        <p class="concierge__name">Alan Wight</p>
-        <p class="concierge__role">On-island Concierge &amp; Villa Manager · GCVC (Cayman)</p>
-      </div>
-      <a href="#enquiry" class="btn btn--outline">Enquire about services</a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     6. LOCATION
-════════════════════════════════════════════════════════════ -->
-<section class="location" id="location" aria-labelledby="location-heading">
-
-  <div class="location__content">
-    <p class="eyebrow">Location</p>
-    <h2 id="location-heading">Rum Point, Grand Cayman</h2>
-    <span class="gold-rule"></span>
-    <p>Rum Point is the quieter, more considered side of Grand Cayman — celebrated for its gin-clear water, powdery sand and the famous sunsets that paint the sky each evening. The villa sits directly on the beach at 134 Sand Pointe Road, facing west.</p>
-    <p>It is far enough from Seven Mile Beach to feel secluded, and close enough to everything that matters to remain effortlessly connected.</p>
-
-    <div class="location__highlights">
-      <div class="location__highlight">Rum Point Club &amp; beach bar — minutes on foot</div>
-      <div class="location__highlight">Kaibo Restaurant — nearby by water or road</div>
-      <div class="location__highlight">Crystal Caves — a short drive</div>
-      <div class="location__highlight">Stingray City — approx. 20 minutes by boat</div>
-      <div class="location__highlight">George Town &amp; Seven Mile Beach — approx. 1 hour</div>
-      <div class="location__highlight">Owen Roberts International Airport — approx. 1 hour</div>
-    </div>
-  </div>
-
-  <div class="location__image">
-    <img
-      src="/assets/images/beach-dusk.jpg"
-      alt="The private beach at dusk — sun loungers, kayaks and palm silhouettes at Rum Point"
-      loading="lazy"
-      decoding="async"
-    >
-  </div>
-
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     7. RATES & AVAILABILITY
-════════════════════════════════════════════════════════════ -->
-<section class="section section--alt" id="rates" aria-labelledby="rates-heading">
-  <div class="container">
-
-    <div class="rates__header reveal">
-      <p class="eyebrow" style="justify-content:center">Rates</p>
-      <h2 id="rates-heading">From US$8,000 per night</h2>
-      <p>Seven-night minimum. All rates in US dollars.</p>
-    </div>
-
-    <div class="rates__grid reveal reveal--d1">
-
-      <div class="rate-card rate-card--featured">
-        <div class="rate-card__season">Festive</div>
-        <div class="rate-card__name">Christmas Week</div>
-        <div class="rate-card__weeks">Late December (Wk 51–52)</div>
-        <div class="rate-card__price">
-          <div class="rate-card__from">From</div>
-          <div class="rate-card__amount">US$9,429</div>
-          <div class="rate-card__per">per night</div>
-        </div>
-      </div>
-
-      <div class="rate-card">
-        <div class="rate-card__season">Peak</div>
-        <div class="rate-card__name">New Year, January &amp; February</div>
-        <div class="rate-card__weeks">New Year week through end of February (Wks 1–7)</div>
-        <div class="rate-card__price">
-          <div class="rate-card__from">From</div>
-          <div class="rate-card__amount">US$9,000</div>
-          <div class="rate-card__per">per night</div>
-        </div>
-      </div>
-
-      <div class="rate-card">
-        <div class="rate-card__season">Peak</div>
-        <div class="rate-card__name">Spring Break &amp; Easter</div>
-        <div class="rate-card__weeks">March–April (Wks 12–14)</div>
-        <div class="rate-card__price">
-          <div class="rate-card__from">From</div>
-          <div class="rate-card__amount">US$9,000</div>
-          <div class="rate-card__per">per night</div>
-        </div>
-      </div>
-
-      <div class="rate-card">
-        <div class="rate-card__season">Late Autumn Peak</div>
-        <div class="rate-card__name">Thanksgiving &amp; December</div>
-        <div class="rate-card__weeks">Thanksgiving through mid-December (Wks 47–50)</div>
-        <div class="rate-card__price">
-          <div class="rate-card__from">From</div>
-          <div class="rate-card__amount">US$8,286</div>
-          <div class="rate-card__per">per night</div>
-        </div>
-      </div>
-
-      <div class="rate-card">
-        <div class="rate-card__season">Shoulder</div>
-        <div class="rate-card__name">Late January – March</div>
-        <div class="rate-card__weeks">Late January through mid-March (Wks 8–11)</div>
-        <div class="rate-card__price">
-          <div class="rate-card__from">From</div>
-          <div class="rate-card__amount">US$8,143</div>
-          <div class="rate-card__per">per night</div>
-        </div>
-      </div>
-
-      <div class="rate-card">
-        <div class="rate-card__season">Value Season</div>
-        <div class="rate-card__name">May – November</div>
-        <div class="rate-card__weeks">May through November (excl. Thanksgiving)</div>
-        <div class="rate-card__price">
-          <div class="rate-card__from">From</div>
-          <div class="rate-card__amount">US$8,000</div>
-          <div class="rate-card__per">per night</div>
-        </div>
-      </div>
-
-    </div><!-- /rates__grid -->
-
-    <div class="rates__notes reveal reveal--d2">
-      <p>7-night minimum stay · Rates in USD · Excludes admin, service fees and taxes — <a href="/terms/">see Terms &amp; Conditions</a></p>
-      <p style="margin-top:0.5rem">Inaugural season opens <strong>December 2026</strong>. Peak weeks book well in advance — we recommend enquiring early.</p>
-    </div>
-
-    <div style="text-align:center;margin-top:2.5rem" class="reveal reveal--d3">
-      <a href="#enquiry" class="btn btn--primary">Check Availability</a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     8. CREDIBILITY / INAUGURAL SEASON
-════════════════════════════════════════════════════════════ -->
-<section class="credibility section" id="credibility" aria-labelledby="credibility-heading">
-  <div class="container">
-
-    <div class="reveal">
-      <p class="eyebrow" style="justify-content:center">New for 2026–27</p>
-      <h2 id="credibility-heading">The inaugural season</h2>
-      <span class="gold-rule" style="margin-inline:auto;background:var(--c-gold)"></span>
-      <p>Nothing Quite Like It opens its doors for the first time in December 2026. There are no reviews because no one has stayed here yet — this is a rare opportunity to be among the very first.</p>
-      <p>What we offer instead is architectural provenance. John Doak Architects — the preeminent authority on luxury homes in the Cayman Islands — conceived and co-designed this estate. KaSa Interiors, a globally experienced design team, composed every room. The result is a villa built not from compromise but from conviction.</p>
-    </div>
-
-    <div class="credibility__pillars">
-      <div class="credibility__pillar reveal reveal--d1">
-        <div class="credibility__pillar-number">6</div>
-        <div class="credibility__pillar-label">En-suite bedrooms, each a considered retreat</div>
-      </div>
-      <div class="credibility__pillar reveal reveal--d2">
-        <div class="credibility__pillar-number">100 ft</div>
-        <div class="credibility__pillar-label">30 m of private beachfront</div>
-      </div>
-      <div class="credibility__pillar reveal reveal--d3">
-        <div class="credibility__pillar-number">Dec</div>
-        <div class="credibility__pillar-label">2026 — opening date, inaugural season</div>
-      </div>
-    </div>
-
-    <div class="credibility__register reveal">
-      <h3>Register your interest</h3>
-      <p>Be first to receive availability and inaugural season details.</p>
-      <!-- Netlify Forms: add netlify attribute and hidden form-name for Netlify hosting -->
-      <form class="register-form" name="register-interest" method="POST" action="/"
-            netlify netlify-honeypot="bot-field" aria-label="Register interest form">
-        <input type="hidden" name="form-name" value="register-interest">
-        <input type="hidden" name="bot-field" style="display:none">
-        <input type="email" name="email" placeholder="Your email address"
-               required aria-label="Email address" autocomplete="email">
-        <button type="submit" class="btn btn--outline">Register</button>
-      </form>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     9. ENQUIRY
-════════════════════════════════════════════════════════════ -->
-<section class="enquiry" id="enquiry" aria-labelledby="enquiry-heading">
-
-  <div class="enquiry__form-panel">
-    <p class="eyebrow">Enquire</p>
-    <h2 id="enquiry-heading">Plan your stay</h2>
-    <p>Tell us about your trip and we'll reply personally within one business day.</p>
-
-    <!-- Netlify Forms / Formspree compatible — see README for setup -->
-    <form class="enquiry-form" name="enquiry" method="POST" action="/"
-          netlify netlify-honeypot="bot-field" novalidate aria-label="Enquiry form">
-      <input type="hidden" name="form-name" value="enquiry">
-      <input type="hidden" name="bot-field" style="display:none">
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Full name <span class="required-mark" aria-hidden="true">*</span></label>
-          <input type="text" id="name" name="name" required
-                 autocomplete="name" placeholder="Your name">
-          <span class="field-error" role="alert"></span>
-        </div>
-        <div class="form-group">
-          <label for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
-          <input type="email" id="email" name="email" required
-                 autocomplete="email" placeholder="your@email.com">
-          <span class="field-error" role="alert"></span>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Phone / WhatsApp <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
-        <input type="tel" id="phone" name="phone"
-               autocomplete="tel" placeholder="+1 345 000 0000">
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="arrival">Arrival date</label>
-          <input type="date" id="arrival" name="arrival">
-        </div>
-        <div class="form-group">
-          <label for="departure">Departure date</label>
-          <input type="date" id="departure" name="departure">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="guests">Number of guests</label>
-        <select id="guests" name="guests">
-          <option value="">Select…</option>
-          <option>2–4 guests</option>
-          <option>5–8 guests</option>
-          <option>9–12 guests</option>
-          <option>12+ (please detail in message)</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Your message <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
-        <textarea id="message" name="message"
-                  placeholder="Tell us about your group, any special requests, or questions you have…"></textarea>
-      </div>
-
-      <div class="form-submit">
-        <button type="submit" class="btn btn--primary">Send Enquiry</button>
-      </div>
-
-      <div class="form-confirmation" role="status" aria-live="polite">
-        <p><strong>Thank you — your enquiry has been received.</strong> We'll reply personally within one business day. We look forward to welcoming you.</p>
-      </div>
-    </form>
-  </div><!-- /enquiry__form-panel -->
-
-  <div class="enquiry__contact-panel" aria-label="Contact details">
-    <h3>Get in touch</h3>
-
-    <div class="contact-detail">
-      <span class="contact-detail__label">Email</span>
-      <span class="contact-detail__value">
-        <a href="mailto:stay@nothingquitelikeit.com">stay@nothingquitelikeit.com</a>
-      </span>
-    </div>
-
-    <div class="contact-detail">
-      <span class="contact-detail__label">Phone</span>
-      <span class="contact-detail__value">
-        <a href="tel:+13458888888">+1 345 888 8888</a>
-      </span>
-    </div>
-
-    <div class="contact-actions">
-      <a href="tel:+13458888888" class="contact-action-btn" aria-label="Call us">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
-        </svg>
-        Call us
+  <a href="/villa.html" class="d-wordmark" aria-label="Nothing Quite Like It">Nothing Quite Like It</a>
+
+  <main class="d-main">
+    <div class="d-card">
+
+      <p class="d-eyebrow">A note before you explore</p>
+      <h1 class="d-title">Nothing Quite <em>Like It</em></h1>
+      <div class="d-rule"></div>
+
+      <p class="d-intro">
+        Thank you for your interest in this extraordinary beachfront estate at Rum Point, Grand Cayman.
+        Please take a moment to read the following before proceeding.
+      </p>
+
+      <ul class="d-points">
+        <li class="d-point">
+          <span class="d-point__num">I</span>
+          <span class="d-point__text">
+            <strong>Villa under construction</strong>
+            Nothing Quite Like It is currently under construction and will open for its inaugural season in December 2026. Everything you see here reflects the vision for the completed estate.
+          </span>
+        </li>
+        <li class="d-point">
+          <span class="d-point__num">II</span>
+          <span class="d-point__text">
+            <strong>Website prototype</strong>
+            This website is still under development. Content, availability, and features may change as we approach opening.
+          </span>
+        </li>
+        <li class="d-point">
+          <span class="d-point__num">III</span>
+          <span class="d-point__text">
+            <strong>AI-generated imagery</strong>
+            All renderings and the walkthrough video shown on this site are AI-generated and do not depict the finished property. They will be replaced with professional photography and film in December 2026.
+          </span>
+        </li>
+      </ul>
+
+      <a href="/villa.html" class="d-cta">
+        Get a first glimpse of the unique experience waiting for you
       </a>
-      <a href="https://wa.me/13458888888" class="contact-action-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-        WhatsApp
-      </a>
+
     </div>
+  </main>
 
-    <div class="contact-response">
-      <p>We respond to all enquiries personally within one business day.</p>
-    </div>
-  </div><!-- /enquiry__contact-panel -->
-
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════════════════ -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__inner">
-
-      <div class="footer__brand">
-        <span class="wordmark">Nothing Quite Like It</span>
-        <span class="tagline">There is nothing quite like it</span>
-        <p class="address">
-          134 Sand Pointe Road, Rum Point<br>
-          Grand Cayman, Cayman Islands<br>
-          <!-- TODO_CONFIRM: rental licence / registration number to display -->
-        </p>
-      </div>
-
-      <div class="footer__col">
-        <h4>The Villa</h4>
-        <ul>
-          <li><a href="#story">Our Story</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#accommodation">Accommodation</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#rates">Rates</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="/terms/">Terms &amp; Conditions</a></li>
-          <li><a href="/privacy/">Privacy Policy</a></li>
-          <li><a href="mailto:stay@nothingquitelikeit.com">Contact</a></li>
-        </ul>
-        <p style="margin-top:1.5rem;font-size:0.75rem;color:rgba(255,255,255,0.3)">
-          Owner / management: GCVC (Cayman)
-        </p>
-      </div>
-
-    </div><!-- /footer__inner -->
-
-    <div class="footer__bottom">
-      <p>&copy; 2026 Nothing Quite Like It. All rights reserved. &nbsp;·&nbsp; <a href="/terms/" style="color:rgba(255,255,255,0.55);text-decoration:underline;text-underline-offset:3px">Terms &amp; Conditions</a> &nbsp;·&nbsp; <a href="/privacy/" style="color:rgba(255,255,255,0.55);text-decoration:underline;text-underline-offset:3px">Privacy Policy</a></p>
-      <span class="footer__trust">Secure enquiry — your details are never shared</span>
-    </div>
-  </div>
-</footer>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     MOBILE STICKY BAR
-════════════════════════════════════════════════════════════ -->
-<nav class="mobile-bar" aria-label="Quick contact">
-  <a href="#enquiry" class="mobile-bar__btn mobile-bar__btn--primary" aria-label="Enquire">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-    </svg>
-    Enquire
-  </a>
-  <a href="tel:+13458888888" class="mobile-bar__btn" aria-label="Call +1 345 888 8888">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
-    </svg>
-    Call
-  </a>
-  <a href="https://wa.me/13458888888" class="mobile-bar__btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-    WhatsApp
-  </a>
-</nav>
-
-
-<!-- Scripts -->
-<script src="/js/main.js" defer></script>
-<script src="/js/gallery.js" defer></script>
-<script src="/js/form.js" defer></script>
+  <footer class="d-footer">
+    &copy; 2026 Nothing Quite Like It &nbsp;&middot;&nbsp; Rum Point, Grand Cayman
+  </footer>
 
 </body>
 </html>
