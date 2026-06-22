@@ -25,13 +25,14 @@
 
 .header__wordmark {
   font-family: var(--f-display);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 400;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--c-white);
   transition: color var(--dur-mid);
   line-height: 1;
+  white-space: nowrap;
 }
 .site-header.scrolled .header__wordmark { color: var(--c-teal); }
 
