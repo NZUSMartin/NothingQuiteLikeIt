@@ -184,9 +184,14 @@
   animation: fadeUp 1s var(--ease-reveal) 0.3s forwards;
 }
 
-.hero__wipe {
+.hero__wipe-text {
   clip-path: inset(0 0 100% 0);
-  animation: wipeDown 2.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  animation: wipeDown 8.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.hero__actions {
+  clip-path: inset(0 0 100% 0);
+  animation: wipeDown 8.4s cubic-bezier(0.16, 1, 0.3, 1) 8.6s forwards;
 }
 
 .hero__name {
