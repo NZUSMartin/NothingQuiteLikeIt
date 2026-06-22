@@ -191,7 +191,7 @@
 
 .hero__actions {
   clip-path: inset(0 0 100% 0);
-  animation: wipeDown 8.4s cubic-bezier(0.16, 1, 0.3, 1) 8.6s forwards;
+  animation: wipeDown 4.2s cubic-bezier(0.16, 1, 0.3, 1) 8.6s forwards;
 }
 
 .hero__name {
